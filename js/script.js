@@ -36,8 +36,9 @@ const personalMovieDB = {
 for (let i = 0; i < 2; i++) {     /* Цикл выполняется 2 раза */
     const a = prompt('Один из последних просмотренных фильмов?', ''),
           b = prompt('На сколько оцените его?', ''); 
-
-    if (a != null && b != null && a !='' && b != '' && a.length < 50) { 
+    /* Условие -Если a-не равно нулю и b-не равно нулю и а-не равно пустой строке и b-не равно пустой строке
+     и a-длинна строки меньше 50  то в personalMovieDB в [a] передаётся значение b и косноль выдаёт done */
+    if (a != null && b != null && a !='' && b != '' && a.length < 50) {   
         personalMovieDB.movies[a] = b;
         console.log('done');
     } else {
